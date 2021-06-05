@@ -7,12 +7,12 @@ const { defaultResponse } = require('../controllers/Default/defaultResponseContr
 const { addQuestions } = require('../controllers/question/addQuestionsController');
 const { getQuestions } = require('../controllers/question/getQuestionsController');
 
+Router.get('/', defaultResponse);
 Router.post('/signup', userSignup);
 Router.post('/signin', userSignIn);
 Router.get('/verifyuser', verifyUser);
 Router.post('/addquestion', addQuestions);
 Router.get('/getquestions/:category', getQuestions);
-Router.get('/', defaultResponse);
 
 module.exports = Router;
 
